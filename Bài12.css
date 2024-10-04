@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /// Xóa khoảng cách và đệm mặc định của các phần tử, đồng thời tính toán kích thước phần tử bao gồm cả viền và padding.
+}
+
+body {
+    font-family: Cascadia Mono, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /// Đặt font Cascadia Mono, nền xám nhạt, chiều cao tối thiểu là 100% chiều cao màn hình. Căn giữa nội dung theo cả chiều ngang và dọc.
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /// Vùng chứa (wrapper) chiếm toàn bộ chiều rộng màn hình, chiều cao 100%, có viền mờ và nền trắng. Sắp xếp phần tử theo cột.
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    flex: 0 0 120px;
+    display: flex;
+    flex: 0,2;
+  
+    /// Đầu trang có nền màu xanh lá cây đậm, chữ trắng, có khoảng cách đệm 20px, chiều cao cố định là 120px.
+}
+
+header h1, .sub-header {
+    margin: 0;
+    font-size: 40px;
+    position: relative;
+    top: 40px; 
+    
+    /// Tiêu đề trong header và sub-header có kích thước font 24px, không có khoảng cách margin.
+}
+header h2, .sub-header {
+    margin: 0;
+    font-size: 30px;
+    text-align: right;
+    position: relative;
+    bottom:0.19999px;
+    left:500px; 
+    
+    /// Tiêu đề trong header và sub-header có kích thước font 24px, không có khoảng cách margin.
+}
+.sub-header {
+    margin-top: 5px;
+    /// Sub-header có khoảng cách phía trên là 5px.
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+    font-size: 24px;
+    /// Phần container chiếm toàn bộ chiều cao còn lại của trang (flex: 1), ẩn thanh cuộn nếu nội dung tràn. Font-size là 24px.
+}
+
+.sidebar {
+    width: 15%;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    overflow-y: auto;
+    /// Thanh bên có chiều rộng 15%, nền đen (mã màu #333), có thanh cuộn dọc nếu nội dung quá dài. Chữ màu trắng.
+}
+
+.sidebar ul {
+    list-style-type: none;
+    /// Danh sách trong sidebar không có ký hiệu đầu dòng (bullet points).
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    /// Mỗi mục trong danh sách cách nhau 10px ở trên và dưới.
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    /// Các liên kết trong danh sách có màu trắng, không có gạch chân và kích thước chữ là 24px.
+}
+
+.main-content {
+    width: 85%;
+    padding: 40px;
+    overflow-y: auto;
+    /// Nội dung chính chiếm 75% chiều rộng, có khoảng cách đệm 40px và thanh cuộn dọc nếu nội dung quá dài.
+}
+
+.main-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    /// Tiêu đề trong nội dung chính có kích thước 22px và cách phần dưới 20px.
+}
+
+.main-content p, .main-content ul {
+    margin-bottom: 15px;
+    /// Các đoạn văn và danh sách trong nội dung chính có khoảng cách phía dưới là 15px.
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #c0c0c0;
+    color: white;
+    flex: 0 0 50px;
+    width: 100%;
+    /// Chân trang căn giữa nội dung, có nền xám nhạt (#c0c0c0), chữ trắng, chiều cao cố định 50px và độ rộng toàn trang.
+}
